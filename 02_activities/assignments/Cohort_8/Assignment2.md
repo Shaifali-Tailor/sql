@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+type 1 : retain changes : there could be 2 tables customer_address (customer_id and address_id columnd) and addresses table (which has address_id, customer_id and other address details like) -- in this case its possible to store 2 diff addresses for one customer as it will have diff address_id
+
+type 2 : this one will have one address table which has data per customer_id -- so if new address is added for a customer_id, previous one will be over written
 ```
 
 ***
